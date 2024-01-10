@@ -40,7 +40,7 @@ function EditAuthor() {
       initialValues:initialValues,
       validationSchema:Yup.object({
        name: Yup.string().required("*Author name is required"),
-       bio:Yup.string().required("*Fill the  biography").max(50,"Only 50 words are allowed")
+       bio:Yup.string().required("*Fill the  biography")
   
   
       }),

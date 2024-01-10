@@ -71,7 +71,7 @@ function Dashboard() {
                 <div className="container-fluid">
                        
                 <div className="row">
-                    <h1>Book info</h1>
+                    <h1>Book Info</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -92,7 +92,7 @@ function Dashboard() {
                                     <td>{e.author}</td>
                                     <td>{e.isbm}</td>
                                     <td>{e.date}</td>
-                                    <td>
+                                    <td className='d-flex'>
                                         <Button variant='primary' onClick={()=>navigate(`/editbook/${e.id}`)}>Edit</Button>
                                         &nbsp;
                                         <Button variant='danger' onClick={()=>{handleBookDelete(e.id)}}>Delete</Button>
@@ -103,7 +103,7 @@ function Dashboard() {
                     </tbody>
                 </Table>
                 </div>
-                <div className="row">
+                <div className="row mt-1">
                     <h1>Author Info</h1>
                 <Table striped bordered hover>
                     <thead>
@@ -121,7 +121,7 @@ function Dashboard() {
                                 return <tr key={i}>
                                     <td>{i+1}</td>
                                     <td>{e.name}</td>
-                                    <td>{e.birthday}</td>
+                                    <td >{e.birthday}</td>
                                     <td>{e.bio}</td>
                                     <td className='d-flex justify-content-center'>
                                         <Button variant='primary' onClick={()=>navigate(`/editauthor/${e.id}`)}>Edit</Button>
